@@ -1,48 +1,231 @@
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-}
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1, h2 {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
     color: #333;
 }
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+h1, h2 {
+    color: #5a5a5a;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #0073e6;
+    border-bottom: 2px solid #0073e6;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
 }
+
+/* Section Styling */
 .section {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease-in-out;
 }
+
+.section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels and Inputs */
 label {
     margin-top: 10px;
     margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    color: #555;
 }
+
 input {
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
+
+input:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.2);
+}
+
+/* Buttons */
 button {
-    padding: 10px;
-    background: #5cb85c;
+    padding: 12px 20px;
+    background: #0073e6;
     color: white;
+    font-size: 1rem;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s ease;
     margin-top: 10px;
+    display: inline-block;
 }
+
+button:hover {
+    background: #005bb5;
+}
+
+/* Add/Remove Button Styles */
+button[type="button"] {
+    background: #f44336;
+}
+
+button[type="button"]:hover {
+    background: #d32f2f;
+}
+
+/* Preview Section */
+/* Resume Preview Section */
 #preview {
-    margin-top: 20px;
-    border: 1px solid #ddd;
-    padding: 20px;
+    margin-top: 30px;
+    border: 2px solid #0073e6;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
     display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Heading Style for Resume */
+#preview h2 {
+    text-align: center;
+    color: #0073e6;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Personal Information Section */
+#preview .personal-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#preview .personal-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+#preview .personal-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Resume Section Styling */
+#preview .section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#preview .section:last-child {
+    border-bottom: none;
+}
+
+#preview .section h3 {
+    font-size: 1.3rem;
+    color: #005bb5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#preview .section ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#preview .section ul li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Skills Section */
+#preview .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#preview .skills span {
+    padding: 8px 12px;
+    background-color: #e0f2ff;
+    color: #0073e6;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* General Styling for Text */
+#preview p {
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Download Button */
+#downloadBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #28a745;
+    color: #ffffff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+#downloadBtn:hover {
+    background: #218838;
 }
